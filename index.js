@@ -15,6 +15,10 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use("/posts", posts)
+
+app.get("/", (req, res) => {
+    res.send("Hello to Memories Application")
+})
 // set database
 
 const port = process.env.PORT || 5000;
